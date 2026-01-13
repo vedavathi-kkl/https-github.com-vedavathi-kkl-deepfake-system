@@ -1,0 +1,25 @@
+# Virtual environments
+venv/
+env/
+
+# Static / auto-generated files
+static/
+
+# Dataset & privacy protection
+data/
+dataset/
+*.jpg
+*.png
+*.jpeg
+*.mp4
+*.avi
+*.zip
+
+# Trained model files
+*.h5
+*.pth
+*.pt
+
+# Python cache
+__pycache__/
+*.pyc
