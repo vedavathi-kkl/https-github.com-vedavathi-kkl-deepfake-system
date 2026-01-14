@@ -1,25 +1,21 @@
-# Virtual environments
-venv/
-env/
-
-# Static / auto-generated files
-static/
-
-# Dataset & privacy protection
-data/
-dataset/
-*.jpg
-*.png
-*.jpeg
-*.mp4
-*.avi
-*.zip
-
-# Trained model files
-*.h5
-*.pth
-*.pt
-
-# Python cache
+# Python cache & environment
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+venv/
+env/
+ENV/
+
+# Dataset folder
+dataset/
+
+# Model files
+*.keras
+*.h5
+*.pt
+*.ckpt
+
+# System files
+.DS_Store
+Thumbs.db

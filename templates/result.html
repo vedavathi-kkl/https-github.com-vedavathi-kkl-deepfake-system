@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result - DeepShield AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6d5dfc, #8f7bff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(18px);
+            padding: 45px;
+            border-radius: 22px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+        }
+
+        h2 {
+            color: #eaf0ff;
+            margin-bottom: 25px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .real {
+            color: #22c55e;
+        }
+
+        .fake {
+            color: #ef4444;
+        }
+
+        .confidence {
+            color: #d6dcff;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Prediction Result</h2>
+
+        {% if image_path %}
+            <img src="{{ image_path }}" alt="Uploaded Image">
+        {% endif %}
+
+        {% if result_text %}
+            <div class="result {{ 'fake' if 'Fake' in result_text else 'real' }}">
+                {{ result_text }}
+            </div>
+        {% endif %}
+
+        {% if confidence %}
+            <div class="confidence">Confidence: {{ confidence }}%</div>
+        {% endif %}
+
+        <a href="/upload" class="btn">Analyze another</a>
+    </div>
+
+</body>
+</html>

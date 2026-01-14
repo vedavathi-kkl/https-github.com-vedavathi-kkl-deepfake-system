@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Media - DeepShield AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #6d5dfc, #8f7bff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(18px);
+            padding: 45px;
+            border-radius: 22px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6d5dfc;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #eaf0ff;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #d6dcff;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 25px;
+            background: rgba(255,255,255,0.85);
+        }
+
+        button {
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="logo">AI</div>
+        <h2>Upload Media</h2>
+        <p>Images & videos supported</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+
+</body>
+</html>
